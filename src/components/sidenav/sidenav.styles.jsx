@@ -9,14 +9,15 @@ export const SideNavContainer = styled.div`
     top: 0;
     left: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: ${props => props.pageFlow};
     align-items: center;
+    justify-content: ${props => props.justifyContent};
     height: 100%;
     width: 100%;
     opacity: ${props => props.opacity};
     z-index: ${props => props.zIndex};
     transition: opacity 1000ms;
-    padding-top: 100px;
+    padding-top: ${props => props.padding};
     color: ${quinary};
     background: linear-gradient(to right, ${quinary}, ${primary});
 

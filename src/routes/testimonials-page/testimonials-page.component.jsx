@@ -5,10 +5,10 @@ import { Colors } from "../../assets/styling";
 
 const { primary } = Colors
 
-const TestimonialsPage = ({setNavBackground, isDesktop}) => {
+const TestimonialsPage = ({setNavBackground, isDesktop, isLandscape}) => {
 
     const pagePadding = isDesktop ? '120px 40px' : '60px 40px'
-    const cardFlow = isDesktop ? 'row' : 'column'
+    const cardFlow = isLandscape ? 'row' : 'column'
 
     useEffect(()=> {
         setNavBackground(primary)

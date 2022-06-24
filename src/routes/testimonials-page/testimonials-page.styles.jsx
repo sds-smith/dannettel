@@ -54,4 +54,5 @@ export const TestimonialCard = styled.div`
 export const TestimonialCardContainer = styled.div`
     display: flex;
     flex-direction: ${props => props.cardFlow};
+    flex-wrap: wrap;
 `

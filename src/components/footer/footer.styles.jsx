@@ -4,7 +4,7 @@ import { Colors } from "../../assets/styling";
 const { primary, quinary } = Colors
 
 export const FooterContainer = styled.div`
-    height: 5%;
+    height: 42px;
     width: ${props => props.width}};
     position: fixed;
     bottom: 3%;

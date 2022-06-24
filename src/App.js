@@ -12,16 +12,17 @@ import './App.css';
 function App() {
 
   const isDesktop = useMediaQuery('(min-width: 1020px)')
+  const isLandscape = useMediaQuery('(orientation: landscape)')
 
   const [navBackground, setNavBackground] = useState('unset')
 
   return (
     <Routes>
-      <Route path='/' element={<Navigation navBackground={navBackground} isDesktop={isDesktop} />} >
+      <Route path='/' element={<Navigation navBackground={navBackground} isDesktop={isDesktop} isLandscape={isLandscape} />} >
         <Route index element={<Home setNavBackground={setNavBackground} isDesktop={isDesktop} />} />
-        <Route path='/contact' element={<ContactPage isDesktop={isDesktop} />} />
+        <Route path='/contact' element={<ContactPage isDesktop={isDesktop} isLandscape={isLandscape} />} />
         <Route path='/about' element={<AboutPage setNavBackground={setNavBackground} isDesktop={isDesktop} />} />
-        <Route path='/testimonials' element={<TestimonialsPage setNavBackground={setNavBackground} isDesktop={isDesktop} />} />
+        <Route path='/testimonials' element={<TestimonialsPage setNavBackground={setNavBackground} isDesktop={isDesktop} isLandscape={isLandscape} />} />
       </Route>
     </Routes>
   );

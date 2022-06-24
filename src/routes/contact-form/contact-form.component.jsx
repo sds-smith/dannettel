@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { CloseButton, ContactFormContainer, ContactForm } from "./contact-form.styles"
+import { CloseButton, ContactFormContainer, ContactForm, ContactCard, ContactDivResponsive } from "./contact-form.styles"
 import Button from '../../components/button/button.component'
 import Footer from '../../components/footer/footer.component'
 import CloseIconBlue from '../../assets/icons/close_darkblue.svg'
@@ -11,7 +11,7 @@ const encode = (data) => {
         .join("&");
   }
 
-const ContactPage = ({isDesktop}) => {
+const ContactPage = ({isDesktop, isLandscape}) => {
 
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -24,6 +24,9 @@ const ContactPage = ({isDesktop}) => {
 
     const pagePadding = isDesktop ? '30px 30px 30px 30%' : '30px'
     const formWidth = isDesktop ? '50%' : 'unset'
+    const responsiveDirection = isLandscape && !isDesktop ? 'row' : 'column'
+    const closeMargin = isLandscape && !isDesktop ? 'unset' : '80px'
+    const formMargin = isLandscape && !isDesktop ? '0px 50px' : '50px 0px'
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -54,22 +57,26 @@ const ContactPage = ({isDesktop}) => {
 
     return (
         <ContactFormContainer pagePadding={pagePadding} >
-            <CloseButton to='/' ><img src={CloseIconBlue} alt='button to close form' /></CloseButton>
-            <h2 >Get in Touch with Ed</h2>
-            <h3 >Atlas</h3>
-            <p >47 E Main St</p>
-            <p >Westminster, MD 21157</p>
-            <h3 >Ed Dannettel of Atlas</h3>
-            <a href='mailto:eddannettel3@gmail.com' >eddannettel3@gmail.com</a>
-            <a href='tel:14108617373' >(410) 861-7373</a>
-            <ContactForm className='form' onSubmit={handleSubmit} formWidth={formWidth} >
-                <input type='text' placeholder='Your First Name' name='first-name' value={firstName} className='input'required onChange={handleChangeFirstName}/>
-                <input type='text' placeholder='Your Last Name' name='last-name' value={lastName} className='input'required onChange={handleChangeLastName}/>
-                <input type='email' placeholder='Your Email Address' name='email' value={email} className='input'required onChange={handleChangeEmail}/>
-                <input type='tel' placeholder="Your Phone Number" name='phone' value={phone} className='input' onChange={handleChangePhone} />
-                <textarea rows="8" cols="33" placeholder='Message' name='message' value={message} className='input' onChange={handleChangeMessage} />
-                <Button type='submit' >Contact</Button>
-            </ContactForm>
+            <CloseButton to='/' closeMargin={closeMargin} ><img src={CloseIconBlue} alt='button to close form' /></CloseButton>
+            <ContactDivResponsive responsiveDirection={responsiveDirection} >
+                <ContactCard >
+                    <h2 >Get in Touch with Ed</h2>
+                    <h3 >Atlas</h3>
+                    <p >47 E Main St</p>
+                    <p >Westminster, MD 21157</p>
+                    <h3 >Ed Dannettel of Atlas</h3>
+                    <a href='mailto:eddannettel3@gmail.com' >eddannettel3@gmail.com</a>
+                    <a href='tel:14108617373' >(410) 861-7373</a>
+                </ContactCard>
+                <ContactForm className='form' onSubmit={handleSubmit} formWidth={formWidth} formMargin={formMargin} >
+                    <input type='text' placeholder='Your First Name' name='first-name' value={firstName} className='input'required onChange={handleChangeFirstName}/>
+                    <input type='text' placeholder='Your Last Name' name='last-name' value={lastName} className='input'required onChange={handleChangeLastName}/>
+                    <input type='email' placeholder='Your Email Address' name='email' value={email} className='input'required onChange={handleChangeEmail}/>
+                    <input type='tel' placeholder="Your Phone Number" name='phone' value={phone} className='input' onChange={handleChangePhone} />
+                    <textarea rows="8" cols="33" placeholder='Message' name='message' value={message} className='input' onChange={handleChangeMessage} />
+                    <Button type='submit' >Contact</Button>
+                </ContactForm>
+            </ContactDivResponsive>
             {isDesktop && <Footer width='40%' />}
         </ContactFormContainer>
     )

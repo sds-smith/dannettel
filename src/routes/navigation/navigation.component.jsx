@@ -7,7 +7,7 @@ import Footer from '../../components/footer/footer.component'
 import { NavigationContainer, LogoContainer, NavLink, NavLinks, AtlasLogo, Hamburger } from './navigation.styles'
 import SideNav from '../../components/sidenav/sidenav.component'
 
-const Navigation = ({navBackground, isDesktop}) => {
+const Navigation = ({navBackground, isDesktop, isLandscape}) => {
 
     const [isOpenMenu, setIsOpenMenu] = useState(false)
     
@@ -31,7 +31,7 @@ const Navigation = ({navBackground, isDesktop}) => {
             </NavLinks>}
           <Hamburger hamburgerHeight={hamburgerHeight} backgroundImage={isOpenMenu ? CloseIcon : HamburgerIcon} onClick={toggleHamburger} />
         </NavigationContainer>
-        <SideNav isOpenMenu={isOpenMenu} isDesktop={isDesktop} toggleHamburger={toggleHamburger} />
+        <SideNav isOpenMenu={isOpenMenu} isDesktop={isDesktop} isLandscape={isLandscape} toggleHamburger={toggleHamburger} />
         {!isDesktop && <Footer width='80%' />}
         <Outlet />
       </Fragment>

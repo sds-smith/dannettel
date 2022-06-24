@@ -14,10 +14,31 @@ export const ContactFormContainer = styled.div`
     display: flex; 
     flex-direction: column;
     justify-content: flex-start;
-    height: 100vh;
+    min-height: 100vh;
     color: ${primary};
     background-color: ${quaternary};
     padding: ${props => props.pagePadding};
+
+`
+
+export const CloseButton = styled(Link)`
+    border: none;
+    background-color: ${quaternary};
+    align-self: flex-end;
+    height: 40px;
+    width: 40px;
+    margin-bottom: ${props => props.closeMargin};
+
+    img {
+        height: 100%;
+    }
+`
+export const ContactDivResponsive = styled.div`
+    display: flex;
+    flex-direction: ${props => props.responsiveDirection};
+`
+
+export const ContactCard = styled.div`
 
     a {
         text-decoration: none;
@@ -40,25 +61,12 @@ export const ContactFormContainer = styled.div`
     }
 `
 
-export const CloseButton = styled(Link)`
-    border: none;
-    background-color: ${quaternary};
-    align-self: flex-end;
-    height: 40px;
-    width: 40px;
-    margin-bottom: 80px;
-
-    img {
-        height: 100%;
-    }
-`
-
 export const ContactForm = styled.form`
     display: flex;
     flex-direction: column;
     align-items: space-evenly;
     width: ${props => props.formWidth};
-    margin: 50px 0px;
+    margin: ${props => props.formMargin};
 
     input {
         margin-bottom: 20px;
