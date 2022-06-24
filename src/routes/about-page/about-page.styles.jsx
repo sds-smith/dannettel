@@ -4,7 +4,6 @@ import { Colors } from "../../assets/styling";
 const { primary, secondary } = Colors
 
 export const AboutPageContainer = styled.div`
-    min-height: 100vh;
     padding: 80px 40px;
     display: flex;
     flex-direction: ${props => props.pageFlow};

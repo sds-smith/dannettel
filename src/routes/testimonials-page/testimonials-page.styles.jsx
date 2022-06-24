@@ -7,7 +7,6 @@ export const TestimonialsPageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: calc(100vh - 60px);
     padding: ${props => props.pagePadding};
     color: ${primary};
     background-color: ${quaternary};
@@ -37,7 +36,8 @@ export const TestimonialsPageContainer = styled.div`
 
 export const TestimonialCard = styled.div`
     width: 310px;
-    height: fit-content;
+    height: 390px;
+    overflow: scroll;
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
