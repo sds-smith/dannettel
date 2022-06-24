@@ -26,8 +26,8 @@ const TestimonialsSnippets = () => {
             </Link>
 
             <ArrowContainer>
-                <button onClick={reverseTestimonials} ><img src={LeftArrow} /></button>
-                <button onClick={advanceTestimonials} ><img src={RightArrow} /></button>
+                <button onClick={reverseTestimonials} ><img src={LeftArrow} alt='button to scroll left' /></button>
+                <button onClick={advanceTestimonials} ><img src={RightArrow} alt='button to scroll right' /></button>
             </ArrowContainer>
         </TestimonialsContainer>
     )

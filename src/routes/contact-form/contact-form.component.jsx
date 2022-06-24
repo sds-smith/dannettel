@@ -10,7 +10,7 @@ const ContactPage = ({isDesktop}) => {
 
     return (
         <ContactFormContainer pagePadding={pagePadding} >
-            <CloseButton to='/' ><img src={CloseIconBlue} /></CloseButton>
+            <CloseButton to='/' ><img src={CloseIconBlue} alt='button to close form' /></CloseButton>
             <h2 >Get in Touch with Ed</h2>
             <h3 >Atlas</h3>
             <p >47 E Main St</p>
