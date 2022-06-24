@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Colors } from "../../assets/styling";
 
-const { primary, secondary, tertiary, quaternary, quinary } = Colors
+const { quinary } = Colors
 
 export const AtlasLogo = styled.img`
     height: 50%;

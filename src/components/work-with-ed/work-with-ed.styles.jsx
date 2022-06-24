@@ -2,7 +2,7 @@ import styled from "styled-components";
 import BackgroundImage from '../../assets/photos/pexels-curtis-adams-3288103.jpg'
 import { Colors } from "../../assets/styling";
 
-const { primary, secondary, tertiary, quaternary, quinary } = Colors
+const { quinary } = Colors
 
 export const WorkWithEdContainer = styled.div`
     display: flex;
