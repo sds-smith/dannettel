@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Colors } from "../../assets/styling";
+
+const { primary, quaternary } = Colors
+//rgba(195, 209, 220, 0.5) === secondary with alpha value for opacity adjustment
 
 export const ContactFormContainer = styled.div`
     position: absolute;
@@ -11,14 +15,13 @@ export const ContactFormContainer = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     height: 100vh;
-    color: #0a4774;
-    background-color: #F9F6F0;
-    // padding: 30px 30px 30px 200px;
+    color: ${primary};
+    background-color: ${quaternary};
     padding: ${props => props.pagePadding};
 
     a {
         text-decoration: none;
-        color: #0a4774;
+        color: ${primary};
 
         &:hover {
             font-style: italic;
@@ -39,7 +42,7 @@ export const ContactFormContainer = styled.div`
 
 export const CloseButton = styled(Link)`
     border: none;
-    background-color: #F9F6F0;
+    background-color: ${quaternary};
     align-self: flex-end;
     height: 40px;
     width: 40px;
@@ -61,19 +64,19 @@ export const ContactForm = styled.form`
         margin-bottom: 20px;
         height: 30px;
         border: 0.5px solid #0a4774;
-        background-color: rgba(195, 209, 220, 0.5);
+        background-color: rgba(195, 209, 220, 0.5); 
 
         ::placeholder {
-            color: #0a4774;
+            color: ${primary};
         }
     }
 
     textarea {
-        border: 0.5px solid #0a4774;
-        background-color: rgba(195, 209, 220, 0.5);
+        border: 0.5px solid ${primary};
+        background-color: rgba(195, 209, 220, 0.5); 
 
         ::placeholder {
-            color: #0a4774;
+            color: ${primary};
         }
     }
 

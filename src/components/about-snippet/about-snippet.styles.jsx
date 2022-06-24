@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import { Colors } from "../../assets/styling";
 
+const { primary, secondary } = Colors
 
 export const AboutPic = styled.img`
     width: ${props => props.imgWidth};
@@ -22,12 +24,12 @@ export const AboutSnippetContainer = styled.div`
     flex-direction: ${props => props.flexDirection};
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #c3d1dc;
-    color: #0a4774;
+    background-color: ${secondary};
+    color: ${primary};
 
     a {
         font-style: italic;
-        color: #0a4774;
+        color: ${primary};
     }
 `
 export const Heading = styled.h2`

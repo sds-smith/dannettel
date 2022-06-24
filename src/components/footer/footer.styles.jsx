@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { Colors } from "../../assets/styling";
+
+const { primary, quinary } = Colors
 
 export const FooterContainer = styled.div`
     height: 5%;
@@ -9,8 +12,8 @@ export const FooterContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #0a4774;
-    color: white;
+    background-color: ${primary};
+    color: ${quinary};
     text-align: center;
     z-index: 10;
 `

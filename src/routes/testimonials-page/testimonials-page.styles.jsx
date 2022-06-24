@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { Colors } from "../../assets/styling";
+
+const { primary, quaternary } = Colors
 
 export const TestimonialsPageContainer = styled.div`
     display: flex;
@@ -6,8 +9,8 @@ export const TestimonialsPageContainer = styled.div`
     align-items: center;
     min-height: calc(100vh - 60px);
     padding: ${props => props.pagePadding};
-    color: #0a4774;
-    background-color: #F9F6F0;
+    color: ${primary};
+    background-color: ${quaternary};
 
 
     h2 {
@@ -22,7 +25,7 @@ export const TestimonialsPageContainer = styled.div`
         p {
             margin: 10px;
             text-align: center;
-            color: #0a4774;
+            color: ${primary};
         }
     
         .attribution {

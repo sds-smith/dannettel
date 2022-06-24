@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { Colors } from "../../assets/styling";
+
+const { primary, secondary, tertiary, quaternary, quinary } = Colors
 
 export const AtlasLogo = styled.img`
     height: 50%;
@@ -48,14 +51,14 @@ export const NavLinks = styled.div`
   font-size: 25px;
 
   a {
-    color: #ffffff;
+    color: ${quinary};
     text-decoration: none;
   }
 `
 export const NavLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
-  color: #ffffff;
+  color: ${quinary};
   text-decoration: none;
 `
 

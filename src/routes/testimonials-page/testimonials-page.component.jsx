@@ -1,6 +1,9 @@
 import { useEffect } from "react"
 import { TestimonialCard, TestimonialCardContainer, TestimonialsPageContainer } from "./testimonials-page.styles"
 import { Testimonials } from "../../assets/testimonials/testimonials"
+import { Colors } from "../../assets/styling";
+
+const { primary } = Colors
 
 const TestimonialsPage = ({setNavBackground, isDesktop}) => {
 
@@ -8,7 +11,7 @@ const TestimonialsPage = ({setNavBackground, isDesktop}) => {
     const cardFlow = isDesktop ? 'row' : 'column'
 
     useEffect(()=> {
-        setNavBackground('#0a4774')
+        setNavBackground(primary)
     })
 
     return (

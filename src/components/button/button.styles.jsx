@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { Colors } from "../../assets/styling";
+
+const { primary, quinary } = Colors
 
 export const BaseButton = styled.button`
   min-width: 165px;
@@ -8,8 +11,8 @@ export const BaseButton = styled.button`
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
-  background-color: #0a4774;
-  color: white;
+  background-color: ${primary};
+  color: ${quinary};
   text-transform: uppercase;
   font-family: 'Open Sans';
   font-weight: bolder;
@@ -18,8 +21,8 @@ export const BaseButton = styled.button`
   display: flex;
   justify-content: center;
   &:hover {
-    background-color: white;
-    color: #0a4774;
+    background-color: ${quinary};
+    color: ${primary};
     border: 1px solid #0a4774;
   }
   `

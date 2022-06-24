@@ -1,12 +1,15 @@
 import styled from "styled-components";
+import { Colors } from "../../assets/styling";
+
+const { primary, quaternary } = Colors
 
 export const TestimonialsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 80px;
-    color: #0a4774;
-    background-color: #F9F6F0;
+    color: ${primary};
+    background-color: ${quaternary};
 
 
     h2 {
@@ -21,7 +24,7 @@ export const TestimonialsContainer = styled.div`
         p {
             margin: 10px;
             text-align: center;
-            color: #0a4774;
+            color: ${primary};
         }
     
         .attribution {
@@ -49,7 +52,7 @@ export const ArrowContainer = styled.div`
 
     button {
         border: none;
-        background-color: #F9F6F0;
-        color: #0a4774;
+        background-color: ${quaternary};
+        color: ${primary};
     }
 `

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
+import { Colors } from "../../assets/styling";
 
+const { quinary } = Colors
 
 export const HomeHero = styled.div`
     height: 100vh;
@@ -39,7 +41,7 @@ export const ButtonsContainer = styled.div`
 
 export const TitleContainer = styled.div`
     text-align: center;
-    color: #fff;
+    color: ${quinary};
 
     h1 {
         font-size: 72px;

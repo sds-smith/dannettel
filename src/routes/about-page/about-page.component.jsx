@@ -2,13 +2,16 @@ import { useEffect } from 'react'
 import { AboutEd } from '../../assets/about/about-ed'
 import { AboutPageContainer, Article } from './about-page.styles'
 import EdEddie from '../../assets/photos/Ed_Eddie.png'
+import { Colors } from "../../assets/styling";
+
+const { primary } = Colors
 
 const AboutPage = ({setNavBackground, isDesktop}) => {
 
     const pageFlow = isDesktop ? 'row' : 'column'
     const articleMargins = isDesktop ? '140px' : 'unset'
     useEffect(()=> {
-        setNavBackground('#0a4774')
+        setNavBackground(primary)
     })
 
     return (

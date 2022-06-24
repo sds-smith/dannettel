@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Colors } from "../../assets/styling";
+
+const { primary, quinary } = Colors
 
 export const SideNavContainer = styled.div`
     position: fixed;
@@ -14,8 +17,8 @@ export const SideNavContainer = styled.div`
     z-index: ${props => props.zIndex};
     transition: opacity 1000ms;
     padding-top: 100px;
-    color: white;
-    background: linear-gradient(to right, #ffffff, #0a4774);
+    color: ${quinary};
+    background: linear-gradient(to right, ${quinary}, ${primary});
 
 `
 
@@ -39,7 +42,7 @@ export const NavLinksContainer = styled.nav`
     padding: 10px;
 `
 
-const LinkStyles = 'text-decoration: none; color: #ffffff; margin-bottom: 30px; &:hover {opacity: 60%; cursor: pointer;} &:visited {text-decoration: none;}'
+const LinkStyles = `text-decoration: none; color: ${quinary}; margin-bottom: 30px; &:hover {opacity: 60%; cursor: pointer;} &:visited {text-decoration: none;}`
 
 export const NavLink = styled(Link)`
     ${LinkStyles}
