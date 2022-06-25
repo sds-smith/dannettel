@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 import { Testimonials } from "../../assets/testimonials/testimonials"
 import { ArrowContainer, TestimonialsContainer } from "./testimonials-snippets.styles"
 import LeftArrow from '../../assets/icons/left_arrow.png'
@@ -20,10 +20,10 @@ const TestimonialsSnippets = () => {
     return (
         <TestimonialsContainer>
             <h2>Testimonials</h2>
-            <Link className='link' to={'/testimonials'} >
+            <HashLink className='link' to={'/testimonials#'} >
                 <p className="quote">{Testimonials[currentTestimonial].snippet}</p>
                 <p className="attribution">-{Testimonials[currentTestimonial].name}</p>
-            </Link>
+            </HashLink>
 
             <ArrowContainer>
                 <button onClick={reverseTestimonials} ><img src={LeftArrow} alt='button to scroll left' /></button>

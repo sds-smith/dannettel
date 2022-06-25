@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import { AboutEd } from '../../assets/about/about-ed'
 import { AboutSnippetContainer,AboutPic, Article, Heading, Paragraph } from './about-snippet.styles'
 import Fam from '../../assets/photos/Fam.png'
@@ -19,7 +19,7 @@ const AboutSnippet = ({isDesktop}) => {
             <Article >
                 <Heading fontFactor={fontFactor} >Meet Ed Dannettel</Heading>
                 <Paragraph fontFactor={fontFactor} >{AboutEd.paragraph1}</Paragraph>
-                <Paragraph fontFactor={fontFactor} >{p2} . . <Link to='/about'>(more)</Link></Paragraph>
+                <Paragraph fontFactor={fontFactor} >{p2} . . <HashLink to='/about#'>(more)</HashLink></Paragraph>
             </Article>
 
         </AboutSnippetContainer>
