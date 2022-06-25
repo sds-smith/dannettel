@@ -20,12 +20,20 @@ time, mark, audio, video {
   box-sizing: border-box;
 }
 
-/* fonts: main title font - Aviano Black, all other - Arial */
+/* fonts: main title font - Aviano Black, all other header text - Montserrat, body text - Roboto */
 /* colors:  primary - #33a4dc (bright blue) */
 /* colors:  secondary - #0a4774 (dark blue) and #ffffff (white) */
 /* colors:  tertiary/other - #33a4dc (bright blue) */
 
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Montserrat, Roboto, Arial, Helvetica, sans-serif;
+}
+
+h2, h3, h4, h5, input, textarea {
+  font-family: Montserrat, Roboto, Arial, Helvetica, sans-serif;
 }
