@@ -1,6 +1,7 @@
 import { useState } from "react"
-import { CloseButton, ContactFormContainer, ContactForm, ContactCard, ContactDivResponsive } from "./contact-form.styles"
+import { CloseButton, ContactFormContainer, ContactForm, ContactDivResponsive } from "./contact-form.styles"
 import Button from '../../components/button/button.component'
+import ContactCard from "../../components/contact-card/contact-card.component"
 import SocialToolbar from "../../components/social-toolbar/social-toolbar.component"
 import CloseIconBlue from '../../assets/icons/close_darkblue.svg'
 
@@ -58,15 +59,8 @@ const ContactPage = ({isDesktop, isLandscape}) => {
         <ContactFormContainer pagePadding={pagePadding} >
             <CloseButton to='/' closeMargin={closeMargin} ><img src={CloseIconBlue} alt='button to close form' /></CloseButton>
             <ContactDivResponsive responsiveDirection={responsiveDirection} >
-                <ContactCard >
-                    <h2 >Get in Touch with Ed</h2>
-                    <h3 >Atlas</h3>
-                    <p >47 E Main St</p>
-                    <p >Westminster, MD 21157</p>
-                    <h3 >Ed Dannettel of Atlas</h3>
-                    <a href='mailto:eddannettel3@gmail.com' >eddannettel3@gmail.com</a>
-                    <a href='tel:14108617373' >(410) 861-7373</a>
-                </ContactCard>
+                <ContactCard />
+
                 <ContactForm className='form' onSubmit={handleSubmit} formWidth={formWidth} formMargin={formMargin} >
                     <input type='text' placeholder='Your First Name' name='first-name' value={firstName} className='input'required onChange={handleChangeFirstName}/>
                     <input type='text' placeholder='Your Last Name' name='last-name' value={lastName} className='input'required onChange={handleChangeLastName}/>

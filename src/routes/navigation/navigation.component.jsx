@@ -6,6 +6,7 @@ import CloseIcon from '../../assets/icons/close_white.svg'
 import SocialToolbar from '../../components/social-toolbar/social-toolbar.component'
 import { NavigationContainer, LogoContainer, NavLink, NavLinks, AtlasLogo, Hamburger } from './navigation.styles'
 import SideNav from '../../components/sidenav/sidenav.component'
+import Footer from '../footer/footer.component'
 
 const Navigation = ({navBackground, isDesktop, isLandscape}) => {
 
@@ -34,6 +35,7 @@ const Navigation = ({navBackground, isDesktop, isLandscape}) => {
         <SideNav isOpenMenu={isOpenMenu} isDesktop={isDesktop} isLandscape={isLandscape} toggleHamburger={toggleHamburger} />
         {!isDesktop && <SocialToolbar width='80%' />}
         <Outlet />
+        <Footer isDesktop={isDesktop} />
       </Fragment>
     )
   }

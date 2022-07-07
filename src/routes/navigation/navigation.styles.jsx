@@ -5,7 +5,7 @@ import { Colors } from "../../assets/styling";
 const { quinary } = Colors
 
 export const AtlasLogo = styled.img`
-    height: 50%;
+    height: 70%;
     width: auto;
 `
 export const Hamburger = styled.button`
