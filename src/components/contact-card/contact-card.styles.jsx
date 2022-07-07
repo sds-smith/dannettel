@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Colors } from "../../assets/styling";
 
-const { primary, quaternary } = Colors
+const { primary } = Colors
 
 export const ContactCardContainer = styled.div`
 
