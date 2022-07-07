@@ -1,6 +1,6 @@
 import { HeadshotContainer, NavLinksContainer, SideNavContainer, NavLink, ExternalLink } from './sidenav.styles'
 import EdHeadshot from '../../assets/photos/Ed_Headshot_copy.png'
-import Footer from '../footer/footer.component'
+import SocialToolbar from '../social-toolbar/social-toolbar.component'
 
 const SideNav = ({isOpenMenu, isDesktop, isLandscape, toggleHamburger}) => {
 
@@ -23,7 +23,7 @@ const SideNav = ({isOpenMenu, isDesktop, isLandscape, toggleHamburger}) => {
                     <ExternalLink href="https://edannettel.idx.atlaspremierrealty.com/property-search/search-form/" target='_blank' onClick={toggleHamburger} >Search Listings</ExternalLink>
                     <NavLink to="/contact" onClick={toggleHamburger} >Contact</NavLink>
                 </NavLinksContainer>
-                {isDesktop && <Footer width='40%' />}
+                {isDesktop && <SocialToolbar width='40%' />}
         </SideNavContainer>
     )
 }

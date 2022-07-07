@@ -3,7 +3,7 @@ import { Colors } from "../../assets/styling";
 
 const { primary, quinary } = Colors
 
-export const FooterContainer = styled.div`
+export const SocialContainer = styled.div`
     height: 42px;
     width: ${props => props.width}};
     position: fixed;

@@ -1,9 +1,8 @@
 import { useState } from "react"
 import { CloseButton, ContactFormContainer, ContactForm, ContactCard, ContactDivResponsive } from "./contact-form.styles"
 import Button from '../../components/button/button.component'
-import Footer from '../../components/footer/footer.component'
+import SocialToolbar from "../../components/social-toolbar/social-toolbar.component"
 import CloseIconBlue from '../../assets/icons/close_darkblue.svg'
-
 
 const encode = (data) => {
     return Object.keys(data)
@@ -77,7 +76,7 @@ const ContactPage = ({isDesktop, isLandscape}) => {
                     <Button type='submit' >Contact</Button>
                 </ContactForm>
             </ContactDivResponsive>
-            {isDesktop && <Footer width='40%' />}
+            {isDesktop && <SocialToolbar width='40%' />}
         </ContactFormContainer>
     )
 }

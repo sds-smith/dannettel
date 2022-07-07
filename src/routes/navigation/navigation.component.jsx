@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import AtlasLogoWhite from '../../assets/1664_logo_sideways-logo-whte-crop-more-top-20201204110725.png'
 import HamburgerIcon from '../../assets/icons/hamburger_white.svg'
 import CloseIcon from '../../assets/icons/close_white.svg'
-import Footer from '../../components/footer/footer.component'
+import SocialToolbar from '../../components/social-toolbar/social-toolbar.component'
 import { NavigationContainer, LogoContainer, NavLink, NavLinks, AtlasLogo, Hamburger } from './navigation.styles'
 import SideNav from '../../components/sidenav/sidenav.component'
 
@@ -32,7 +32,7 @@ const Navigation = ({navBackground, isDesktop, isLandscape}) => {
           <Hamburger hamburgerHeight={hamburgerHeight} backgroundImage={isOpenMenu ? CloseIcon : HamburgerIcon} onClick={toggleHamburger} />
         </NavigationContainer>
         <SideNav isOpenMenu={isOpenMenu} isDesktop={isDesktop} isLandscape={isLandscape} toggleHamburger={toggleHamburger} />
-        {!isDesktop && <Footer width='80%' />}
+        {!isDesktop && <SocialToolbar width='80%' />}
         <Outlet />
       </Fragment>
     )
