@@ -10,7 +10,7 @@ const ContactCard = ({color}) => {
             <p >47 E Main St<br/>Westminster, MD 21157</p>
             <a href='tel:14108617373' >Direct (410) 861-7373</a>
             <a href='tel:14108617373' >Office  (443) 487-6410</a>
-            <a href='mailto:eddannettel3@gmail.com' >eddannettel3@gmail.com</a>
+            <a href='mailto:e.dannettel@atlaspremierrealty.com' >e.dannettel@atlaspremierrealty.com</a>
         </ContactCardContainer>
     )
 
